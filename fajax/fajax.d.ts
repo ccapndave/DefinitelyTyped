@@ -1,5 +1,6 @@
-module fajax {
+declare module 'fajax' {
+	function get(url: string): Promise<{ body: any }>;
+	function post(url: string, data?: any): Promise<{ body: any }>;
 	
-	declare function fajax(string: String): Promise<{ body: String }>;
-	
+	export = { default: get, get, post }
 }
